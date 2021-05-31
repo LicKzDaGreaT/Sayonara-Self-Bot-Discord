@@ -1,0 +1,20 @@
+{
+    "TOKEN": "",
+    "PREFIX": "/",
+    "COLOR": "000000",
+    "IMAGE": "https://i.imgur.com/Tq5hNg8.gif",
+
+    "SAYO_SATE": "off",
+    "AFK_MODE": "off",
+    "REPORT_MODE": "on",
+    "ADBLOCK_INVITE": "on",
+    "NITRO_SNIPER": "on",
+
+    "AFK_MSG": "**> Sayonara** Sorry, i'm AFK try to talk with me later.",
+
+    "MULTI_STEAM": ["Misakiii", "Sayonara", "Selfbot", "!!"],
+    "RANDOM_NICKNAME": ["Misaki", "is", "here", "hehe"],
+
+    "NORMAL_BETTER_EMOJIS": [":)", ":("],
+    "CUSTOM_BETTER_EMOJIS": ["https://cdn.discordapp.com/emojis/585569939407241247?size=40", "https://cdn.discordapp.com/emojis/820451385707069480?size=40"]
+}
