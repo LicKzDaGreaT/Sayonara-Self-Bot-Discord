@@ -6,7 +6,6 @@ var utility_region = require("./utility/regions.json")
 const Discord = require("misakiii-discordjs")
 const handler = require('d.js-command-handler');
 const client = new Discord.Client()
-const disbut = require('discord-buttons')(client);
 const axios = require('axios').default;
 const { NekoBot } = require("nekobot-api");
 const randomPuppy = require('random-puppy');
@@ -4849,7 +4848,6 @@ client.on("message", message =>
                 .addField("**```" + prefix + "pokedex + POKEMON NAME ```**", `***${language.POKEDEX_DESC}.***`)
                 .addField("**```" + prefix + "mcskins + NAME ```**", `***${language.MCSKINS_DESC}.***`)
                 .addField("**```" + prefix + "mcuser + NAME ```**", `***${language.MCUSER_DESC}.***`)
-                .addField("**```" + prefix + "fakebutton ```**", `***${language.FAKEBUTTON}.***`)
                 .setImage(image)
                 .setFooter(`🌸 ${Project_Name} | Made By Misakiii 🌸`, image)
         
@@ -5278,18 +5276,6 @@ client.on("message", message =>
                 message.channel.send(embed)
             })
         }
-
-        if (cmd === "fakebutton")
-        {
-            let button = new disbut.MessageButton()
-            .setStyle('red') //default: blurple
-            .setLabel('My First Button!') //default: NO_LABEL_PROVIDED
-            .setID('click_to_function') //note: if you use the style "url" you must provide url using .setURL('https://example.com')
-            .setDisabled(); //disables the button | default: false
-            
-            message.channel.send('Hey, i am powered by https://npmjs.com/discord-buttons', button);
-        }
-
         //#endregion
         
 
