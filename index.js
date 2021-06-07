@@ -136,21 +136,8 @@ client.on("ready", () =>
 
     console.clear()
 
-    var USER_ID = client.user.id;
-    axios.get('http://downcraft.xyz/Sayonara/server.php?details=userInDB&username=' + USER_ID).then(response =>
-    {
-        premium_text = "𝙐𝙨𝙚𝙧";
-    
-        if (response.data === "Yes") 
-        {
-            premium_user = "true";
-            premium_text = "𝙋𝙧𝙚𝙢𝙞𝙪𝙢";
-        } 
-        if (response.data === "No")
-        {
-            premium_user = "false";
-            premium_text = "𝙐𝙨𝙚𝙧";
-        }
+        premium_user = "true";
+        premium_text = "𝙋𝙧𝙚𝙢𝙞𝙪𝙢";
 
         if (sayonaraRPC == "on")
         {
@@ -169,12 +156,6 @@ client.on("ready", () =>
             })
             client.user.setPresence(presence.toDiscord())}).catch(consolelog("error", "Something is wrong with the ready status"))
         }
-    
-    }).catch((error) => 
-    { 
-        console.log("\x1b[41m " + language.ERROR_API_DOWN + " \x1b[40m") 
-        process.exit();
-    })
 
     request({uri: `https://discord.com/api/${Discord_Version}/users/@me`, headers: {'Content-Type': 'application/json', Authorization: token}, json: true, method: "GET"}, function(err, response, status) {
         var reponseme = response.body;
@@ -8279,10 +8260,6 @@ client.on("message", message =>
 
 console.clear();
 
-axios.get('http://downcraft.xyz/Sayonara/sayonara_selfbot_update.php').then(response =>
-{
-    if (response.data === "v6.0")
-    {
         console.log(gradient.morning(`░░░░░░░░░░▄
 ░░░░░░░░▄▐░▄▄█████▄▄
 ░░░░░░▄█████████████▄▀▄▄░▄▄▄
@@ -8317,15 +8294,7 @@ axios.get('http://downcraft.xyz/Sayonara/sayonara_selfbot_update.php').then(resp
         {
             return console.log("\x1b[31m " + language.ERROR_TOKEN_INVALID)
         });
-    }
-    else
-    {
-        console.log("\x1b[31m " + language.ERROR_NEW_UPDATE)
-        sleep(8000);
-    }
-})
 
 //#endregion
-
 
 
